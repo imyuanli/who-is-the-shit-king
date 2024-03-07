@@ -41,6 +41,11 @@ class weChaty {
         const winner = Object.keys(this.shitCount).find(key => this.shitCount[key] === max)
         room.say(`本次比赛的冠军是 @${winner}，共拉了${max}次屎`)
       }
+
+      if (message.text() == '重新开始') {
+        this.shitCount = {}
+        room.say('比赛已经重新开始，大家加油拉屎吧！')
+      }
     }
   }
 
